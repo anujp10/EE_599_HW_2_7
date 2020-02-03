@@ -42,3 +42,25 @@ TEST(MapShould_3, MapReturn_3) {
   expected.insert(std::pair<char, char> ('r', 'k'));
   EXPECT_EQ(expected, actual);
 }
+
+TEST(MapShould_4, MapReturn_4) {
+  Solution solution;
+  std::string str1 = "";
+  std::string str2 = "empty";
+  std::map<char, char> actual = solution.MapStrings(str1, str2);
+  std::map<char, char> expected;
+  EXPECT_EQ(expected, actual);
+}
+
+TEST(MapShould_5, MapReturn_5) {
+  Solution solution;
+  std::string str1 = "ee598";
+  std::string str2 = "cc402";
+  std::map<char, char> actual = solution.MapStrings(str1, str2);
+  std::map<char, char> expected;
+  expected.insert(std::pair<char, char> ('e', 'c'));
+  expected.insert(std::pair<char, char> ('5', '4'));
+  expected.insert(std::pair<char, char> ('9', '0'));
+  expected.insert(std::pair<char, char> ('8', '2'));
+  EXPECT_EQ(expected, actual);
+}
